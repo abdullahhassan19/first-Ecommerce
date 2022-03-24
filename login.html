@@ -1,0 +1,103 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        #navbar {
+       display: flex;
+       justify-content: space-around;
+       background-color: teal;
+       padding: 10px;
+     }
+
+     a {
+       text-decoration: none;
+       color: rgb(184, 94, 10);
+       font-size: 40px;
+       font-weight: 700;
+     }
+     #navbar a:hover {
+       color: white;
+     }
+     #navbar a {
+       cursor: pointer;
+     }
+
+     #bottom{
+         text-align: center;
+         align-items: center;
+         justify-content: center;
+         justify-items: center;
+         line-height: 30px;
+         margin-top: 50px;
+     }
+     #bottom > input{
+         margin-top: 30px;
+         line-height: 30px;
+     }
+   </style>
+
+
+</head>
+<body>
+
+    <div id="navbar">
+
+        <p>
+            <a href="home.html"> Home</a>
+        </p>
+        <p><a href="mens.html">Mens</a></p>
+        <p><a href="womens.html">Womens</a></p>
+        <p><a href="cart.html">Cart</a></p>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+
+    </div>
+
+
+    <form id="bottom">
+
+        <input  id="email" type="text" placeholder="Enter Email">
+        <br>
+        <input id="pass" type="password" placeholder="Enter Password">
+        <br>
+        <input type="submit">
+        <br>
+
+
+    </form>
+</body>
+</html>
+
+<script>
+
+    document.querySelector("form").addEventListener("submit", loginfun);
+
+    var reguser = JSON.parse( localStorage.getItem("usercred"))||[]
+
+    function loginfun(){
+        event.preventDefault();
+        var enteredemail = document.querySelector("#email").value;
+        var enterepass = document.querySelector("#pass").value;
+
+        for(var i=0;i<reguser.length;i++){
+            if(reguser[i].email == enteredemail && reguser[i].pass == enterepass){
+                alert("login success");
+                window.location.href = "index.html";
+                break;
+            }
+            
+            else{
+                alert("Check Email and Password")
+            }
+        }
+        
+       
+
+    }
+
+
+
+</script>

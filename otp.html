@@ -1,0 +1,65 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        #mobile{
+            margin-top: -10px;
+        }
+    </style>
+</head>
+<body>
+    <center>
+        <div>
+            <h3>
+                Secure payment Gateway
+            </h3>
+    
+            <p>Otp sent to your mobile number</p>
+            <br>
+            <p id="mobile"> </p>
+    
+            <form >
+                <input id="otp" placeholder="Enter OTP" type="number">
+                <input type="submit">
+            </form>
+            <h3 id="succ"></h3>
+    
+    
+    
+        </div>
+    </center>
+</body>
+</html>
+<script>
+    // document.
+    
+    var userdata = JSON.parse(localStorage.getItem("usercred"))
+    // console.log(userdata[0].mobile)
+    var mobile = userdata[0].mobile
+    // console.log(mobile)
+    document.querySelector("#mobile").innerHTML = mobile
+    document.querySelector("form").addEventListener("submit", otpcheck)
+    
+    
+    function otpcheck(){
+        event.preventDefault();
+        
+        var otp = document.querySelector("#otp").value
+        // console.log(otp)
+        if (otp === "12345"){
+            alert("Paymet successfull")
+            // console.log("YES")
+            document.querySelector("#succ").innerHTML= "Order Placed Succesfully"
+        }
+        else{
+            alert("Invalid OTP")
+            document.querySelector("#succ").innerHTML=""
+        }
+    }
+
+
+</script>

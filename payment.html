@@ -1,0 +1,66 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>payment page</title>
+
+    <style>
+        h1 {
+            text-align: center;
+        }
+    #bottom{
+         text-align: center;
+         /* align-items: center; */
+         /* justify-content: center; */
+         /* justify-items: center; */
+         line-height: 30px;
+         margin-top: 50px;
+     }
+     #bottom > input{
+         margin-top: 30px;
+         line-height: 30px;
+     }
+    </style>
+</head>
+<body>
+    <h1>Welcome to Payment page</h1>
+
+   <form id="bottom">
+        <input id="cardnumber" type="number" placeholder="Card Number">
+        <br>
+        <input  id="exp" type="number" placeholder="Enter Expiry">
+        <br>
+        <input id="cvv" type="Number" placeholder="Enter CVV">
+        <br>
+        <input type="submit">
+
+
+   </form>
+    
+</body>
+</html>
+
+<script>
+    
+    document.querySelector("form").addEventListener("submit", orderplaced)
+    function orderplaced(){
+        event.preventDefault();
+        var cardnumber = document.querySelector("#cardnumber").value
+        var cvv = document.querySelector("#cvv").value
+        if(cardnumber.length === 16 && cvv.length ===3 ){
+            // alert("Order Successfull")
+            window.location.href = "otp.html";
+           
+        }
+        else if (cardnumber.length > 16 || cardnumber.length < 16 ){
+            alert("Invalid Card Number")
+        }
+
+        
+
+        
+        
+    }
+
+</script>

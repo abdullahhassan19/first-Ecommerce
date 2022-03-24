@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+      #body{
+        width: 90%;
+        margin: auto;
+        margin-top: 20px;
+      }
+         #navbar {
+        display: flex;
+        justify-content: space-around;
+        background-color: teal;
+        padding: 10px;
+      }
+
+      a {
+        text-decoration: none;
+        color: white;
+        font-size: 40px;
+        font-weight: 700;
+      }
+      #navbar a:hover {
+        color: rgb(214, 189, 47);
+      }
+      #navbar a {
+        cursor: pointer;
+      }
+      #box{
+        
+        width: 60%;
+        text-align: center;
+       margin: auto;
+       gap: 50px;
+       margin-top: 100px;
+        /* justify-content: center; */
+        display: grid;
+        grid-template-columns: repeat(2,1fr);
+       
+
+      }
+      #inner{
+        margin-top: -50px;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        height: 400px;
+      }
+     
+      #inner > div {
+        text-align: center;
+        /* margin: auto; */
+        align-items: center;
+        display: flex;
+        justify-content: center;
+      }
+      #strike{
+      text-decoration: line-through;
+      margin-left: 50px;
+      }
+      #box > a{
+        text-decoration: none;
+        color: black;
+        font-size: 15px;
+      }
+      #lineheight{
+        line-height: 20px;
+      }
+    </style>
+</head>
+<body id="body">
+
+    <div id="navbar">
+
+        <p>
+            <a href="index.html"> Home</a>
+        </p>
+        <p><a href="mens.html">Mens</a></p>
+        <p><a href="womens.html">Womens</a></p>
+        <p><a href="cart.html">Cart</a></p>
+        <p><a href="login.html">Login</a></p>
+        <p><a href="signup.html">Signup</a></p>
+
+    </div>
+
+    <center id="lineheight">
+      <h1>Welcome to the Masai Mart</h1>
+    <h3>30% offer on every products </h3>
+    <p>promocode                    "masai30"</p>
+
+    </center>
+    <div id="box">
+
+     
+
+
+      <a href="mens.html">
+        <div id="inner">
+          <img src="https://content.shop4reebok.com/static/Product-GQ8758/reebok_GQ8758_1.jpg.plp" alt="">
+          <h3>MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE</h3>
+          <div id="flex">
+            <h4>OfferPrice    769</h4>
+            <p id="strike">1099</p>
+          </div>
+        </div>
+      </a>
+     
+
+      <a href="womens.html">
+
+        <div id="inner">
+          <img src="https://content.shop4reebok.com/static/Product-GT2338/reebok_GT2338_1.jpg.plp" alt="">
+          <h3>WOMEN'S REEBOK SLEEVE TEE</h3>
+          <div id="flex">
+            <h4>OfferPrice      699</h4>
+            <p id="strike">1245</p>
+          </div>
+        </div>
+      </a>
+
+    </div>
+    
+
+   
+</body>
+</html>
+
+<!-- image_url:
+"https://content.shop4reebok.com/static/Product-GQ8758/reebok_GQ8758_1.jpg.plp ",
+name: "MEN'S REEBOK TRAINING  POLO T-SHIRTS TEE  ",
+price: 769,
+strikedoffprice: 1099, -->
+<!-- 
+image_url:
+      "https://content.shop4reebok.com/static/Product-GT2338/reebok_GT2338_1.jpg.plp",
+    name: "WOMEN'S REEBOK SLEEVE TEE",
+    price: 699,
+    strikedoffprice: 1245, -->
